@@ -5,7 +5,7 @@ using EfCoreTester;
 using var db = new BloggingContext();
 db.Database.EnsureCreated(); // Creates the db (don't do this in a real app)
 // Create
-Console.WriteLine(db.DbPath);
+Console.WriteLine($"Sqlite database created at {db.DbPath}");
 Console.WriteLine("Inserting a new blog");
 db.Add(new Blog { Url = "http://blogs.msdn.com/adonet" });
 db.SaveChanges();
